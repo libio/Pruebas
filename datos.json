@@ -1,0 +1,44 @@
+[
+    {
+        "id": "48106237",
+        "Nombre": "Libio",
+        "email": "134541@unsaac.edu.pe",
+        "estado": true
+    },
+    {
+        "id": "48106345",
+        "Nombre": "Erik",
+        "email": "erik@unsaac.edu.pe",
+        "estado": false
+    },
+    {
+        "id": "48154657",
+        "Nombre": "Fredy",
+        "email": "fredy@unsaac.edu.pe",
+        "estado": true
+    },
+    {
+        "id": "48106879",
+        "Nombre": "Yackelin",
+        "email": "yackelin@unsaac.edu.pe",
+        "estado": false
+    },
+    {
+        "id": "48106457",
+        "Nombre": "Sol Corina",
+        "email": "corina@unsaac.edu.pe",
+        "estado": true
+    },
+    {
+        "id": "48134577",
+        "Nombre": "Eulogio",
+        "email": "eulogio@unsaac.edu.pe",
+        "estado": true
+    },
+    {
+        "id": "34346866",
+        "Nombre": "Luisa",
+        "email": "luisa@unsaac.edu.pe",
+        "estado": true
+    }
+]

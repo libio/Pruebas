@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Aprendiendo JavaScripts</title>
+  </head>
+  <body>
+    <div class="container my-5 ">
+        <div class="form-inline">
+          <div class="form-group mb-2">
+            <label for="inputEmail3" class="col-sm-12 col-form-label">Ingrese su DNI: </label>
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <input type="NroDoc" class="form-control" id="NroDoc" name="NroDoc" placeholder="Nro de documento">
+          </div>
+          <button class="btn btn-danger mb-2" onclick="traer()">Consultar</button>
+        </div>
+        
+      
+    </div>
+    <div class="container my-5 text-center">
+        
+        <!-- <button class="btn btn-danger w-100" onclick="traer()">Obtener</button> -->
+        
+        <div class="mt-5" id="contenido">
+          
+
+        </div>
+    </div>
+    <script>
+      
+        var NroDoc = document.getElementById("NroDoc").valor;
+        var contenido = document.querySelector('#contenido');
+
+        function traer(){
+           fetch('http:///contamaxperu.com.pe/wsdni/reniecS.php?token=PALERP&dni=48106237')
+           .then(res => res.json())
+           .then(datos =>{
+             tabla(datos);
+             console.log(datos);
+           });
+        };
+
+        function tabla(datos)
+        {
+          fetch('https://randomuser.me/api/')
+             .then(data => data.json())
+             .then(data =>{
+              
+             
+           });
+          
+          
+            //console.log(valor).nombre;
+            contenido.innerHTML=`<form>
+                            <div class="form-row">
+                              <div class="form-group col-md-3">
+                                <label for="inputCity">DNI</label>
+                                <input type="text" class="form-control" id="inputCity">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="inputCity">Nombres</label>
+                                <input type="text" class="form-control" id="inputCity">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="inputCity">A.Paterno</label>
+                                <input type="text" class="form-control" id="inputCity">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="inputZip">A.Materno</label>
+                                <input type="text" class="form-control" id="inputZip">
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-3">
+                                <label for="inputCity">Fecha Nacimiento</label>
+                                <input type="text" class="form-control" id="inputCity">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="inputCity">Sexo</label>
+                                <input type="text" class="form-control" id="inputCity">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="inputCity">Estatura</label>
+                                <input type="text" class="form-control" id="inputCity">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="inputZip">Donacion de organos</label>
+                                <input type="text" class="form-control" id="inputZip">
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-3">
+                                <label for="inputCity">Estudio</label>
+                                <input type="text" class="form-control" id="inputCity">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="inputCity">Padre</label>
+                                <input type="text" class="form-control" id="inputCity">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="inputCity">Madre</label>
+                                <input type="text" class="form-control" id="inputCity">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="inputZip">Departamento</label>
+                                <input type="text" class="form-control" id="inputZip">
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-3">
+                                <label for="inputCity">Provincia</label>
+                                <input type="text" class="form-control" id="inputCity">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="inputCity">Distrito</label>
+                                <input type="text" class="form-control" id="inputCity">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="inputCity">Direccion</label>
+                                <input type="text" class="form-control" id="inputCity">
+                              </div>
+                              <div class="form-group col-md-3">
+                                <label for="inputZip">Fecha de ubigeo</label>
+                                <input type="text" class="form-control" id="inputZip">
+                              </div>
+                            </div>
+                          </form>`
+          
+        }
+    </script>
+  </body>
+</html>
